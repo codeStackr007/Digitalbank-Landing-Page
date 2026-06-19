@@ -156,8 +156,8 @@ button {
 ====================================== */
 
 /* --- BUTTONS --- */
-.hero__btn,
 .header__btn,
+.hero__btn,
 .footer__btn {
   background: var(--gradient-cta);
   color: var(--white);
@@ -182,7 +182,7 @@ button {
 
 /* --- HEADER & NAV --- */
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -191,9 +191,9 @@ button {
   z-index: var(--z-header);
 }
 
-/* Compensate for fixed header so page content isn't hidden */
+/* No padding-top needed for sticky positioning */
 main.main {
-  padding-top: var(--header-height);
+  position: relative;
 }
 
 .header__container {
@@ -555,7 +555,7 @@ main.main {
 }
 
 /* --- TABLET --- */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   html,
   body,
   main.main {
@@ -660,7 +660,7 @@ main.main {
 }
 
 /* --- LAPTOP / SMALL DESKTOP: 1024px --- */
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .hero__visual::after {
     background: var(--hero-mockup) no-repeat center bottom / 65%;
     top: -50%;
@@ -681,8 +681,8 @@ main.main {
   }
 }
 
-/* --- DESKTOP: 1400px (main desktop) --- */
-@media (min-width: 1200px) {
+/* --- DESKTOP: 1200px (main desktop) --- */
+@media (min-width: 75rem) {
   .header__toggle {
     display: none;
   }
@@ -780,8 +780,8 @@ main.main {
     top: 50%;
     left: 50%;
     transform: translate(
-      -37.5%,
-      -59.9%
+      -39%,
+      -61.5%
     ); /* precise offset to align blob behind mockup */
     background: var(--hero-bg-desktop) no-repeat center / 100%;
     z-index: 1;
@@ -902,7 +902,7 @@ main.main {
 /* --- REDUCED MOTION --- */
 @media (prefers-reduced-motion: reduce) {
   * {
-    transition-duration: 0.01ms !important;
-    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms;
+    animation-duration: 0.01ms;
   }
 }
