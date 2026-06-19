@@ -780,7 +780,7 @@ main.main {
     top: 50%;
     left: 50%;
     transform: translate(
-      -37.67%,
+      -39.9%,
       -62%
     ); /* precise offset to align blob behind mockup */
     background: var(--hero-bg-desktop) no-repeat center / 100%;
